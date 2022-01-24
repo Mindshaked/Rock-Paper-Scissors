@@ -3,8 +3,6 @@ const arr = ["rock", "paper", "scissors"];
 
 
 
-
-
 function computerPlay(){
     let numberSelection = Math.random() * 3;
     let computerChoice = arr [Math.floor(numberSelection)];
@@ -15,6 +13,8 @@ function computerPlay(){
 function playerSelection(){
     let playerInput = prompt("What do you choose, rock, paper or scissors?");
     let playerChoice = playerInput.toLowerCase();
+        if (! arr(playerInput))
+            playerSelection();
     return playerChoice;
 
 }
@@ -59,9 +59,16 @@ function playRound(playerSelection, computerSelection){
 
 }
 
+function playFullGame (){
+    for (let rounds = 0; rounds < 5; rounds++)
+    playRound(playerSelection, computerSelection);
+}
 
 
-const playerSelection = "Rock";
+
+const playerChoice = "Rock";
 const computerSelection = computerPlay();
+
+playRound(playerSelection, computerSelection);
 
 console.log(playRound(playerSelection, computerSelection))
