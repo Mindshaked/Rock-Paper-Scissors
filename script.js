@@ -13,8 +13,10 @@ function computerPlay(){
 function playerSelection(){
     let playerInput = prompt("What do you choose, rock, paper or scissors?");
     let playerChoice = playerInput.toLowerCase();
-        if (! arr(playerInput))
+        if (! arr[playerChoice]){
+            console.log("Use on of these terms: rock, paper or scissors")
             playerSelection();
+        }
     return playerChoice;
 
 }
@@ -25,8 +27,7 @@ let playerWins = 0;
 let computerWins = 0;
 
 
-function playRound(playerSelection, computerSelection){
-    
+function playRound(playerChoice, computerSelection){
     
     if (playerSelection == computerSelection){
         console.log("tie");
@@ -60,15 +61,16 @@ function playRound(playerSelection, computerSelection){
 }
 
 function playFullGame (){
-    for (let rounds = 0; rounds < 5; rounds++)
-    playRound(playerSelection, computerSelection);
+    for (let rounds = 0; rounds < 6; rounds++){
+    computerPlay();
+    playerSelection();
+    playRound(playerChoice, computerChoice);
+    console.log(playerChoice, computerChoice);
+    }
 }
 
 
 
-const playerChoice = "Rock";
-const computerSelection = computerPlay();
+playFullGame ()
 
-playRound(playerSelection, computerSelection);
-
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound(playerWins, computerWins))
