@@ -85,20 +85,27 @@ buttons.forEach((button) => {
     button.addEventListener('click', function(e) {
         if (e.target.id == "rockButton"){
             let playerChoice = "rock";
-            let computerChoice = "";
-            computerPlay();
-            playRound(playerChoice,computerChoice);
+            let computerChoice = computerPlay();
+            let playerWins = 0;
+            let computerWins = 0;
+            let winner = playRound(playerChoice,computerChoice);
+            console.log(winner);
         } else if (e.target.id == "paperButton"){
             let playerChoice = "paper";
-            let computerChoice = "";
-            computerPlay();
-            playRound(playerChoice,computerChoice);
+            let computerChoice = computerPlay();
+            let playerWins = 0;
+            let computerWins = 0;
+            let winner = playRound(playerChoice,computerChoice);
+            console.log(winner);
         } else if (e.target.id == "scissorsButton"){
             let playerChoice = "scissors";
-            let computerChoice = "";
-            computerPlay();
-            playRound(playerChoice,computerChoice);
+            let computerChoice = computerPlay();
+            let playerWins = 0;
+            let computerWins = 0;
+            let winner = playRound(playerChoice,computerChoice);
+            console.log(winner);
         }
+
     });
 });
 
