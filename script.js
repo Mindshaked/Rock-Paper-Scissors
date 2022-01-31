@@ -61,8 +61,16 @@ function playRound(playerChoice, computerChoice){
         console.log("Computer wins!");
         return computerWins;
         
+    } else if (playerChoice == "scissors" && computerChoice == "paper"){
+        playerWins++;
+        console.log("You win!");
+        return playerWins;
+                
+    } else if (playerChoice == "scissors" && computerChoice == "rock"){
+        computerWins++;
+        console.log("Computer wins!");
+        return computerWins;
     }
-        
 
 
 }
@@ -86,22 +94,16 @@ buttons.forEach((button) => {
         if (e.target.id == "rockButton"){
             let playerChoice = "rock";
             let computerChoice = computerPlay();
-            let playerWins = 0;
-            let computerWins = 0;
             let winner = playRound(playerChoice,computerChoice);
             console.log(winner);
         } else if (e.target.id == "paperButton"){
             let playerChoice = "paper";
             let computerChoice = computerPlay();
-            let playerWins = 0;
-            let computerWins = 0;
             let winner = playRound(playerChoice,computerChoice);
             console.log(winner);
         } else if (e.target.id == "scissorsButton"){
             let playerChoice = "scissors";
             let computerChoice = computerPlay();
-            let playerWins = 0;
-            let computerWins = 0;
             let winner = playRound(playerChoice,computerChoice);
             console.log(winner);
         }
