@@ -1,7 +1,7 @@
 const arr = ["rock", "paper", "scissors"];
 
 
-
+// Computer choice
 function computerPlay(){
     let numberSelection = Math.random() * 3;
     let computerChoice = arr [Math.floor(numberSelection)];
@@ -9,25 +9,6 @@ function computerPlay(){
 
 }
 
-/*function playerSelectionRock(){
-    let playerChoice = "rock";
-    console.log("rock");
-    return playerChoice;
-
-}
-function playerSelectionPaper(){
-    let playerChoice = "paper";
-    console.log("paper");
-    return playerChoice;
-
-}
-function playerSelectionScissors(){
-    let playerChoice = "scissors";
-    console.log("scissors");
-    return playerChoice;
-
-}
-*/
 
 
 let playerWins = 0;
@@ -39,6 +20,8 @@ let playerResultMarker = document.getElementById("playerResult")
 let computerResultMarker = document.getElementById("computerResult");
 console.log(computerResultMarker);
 
+
+// Full Round
 function playRound(playerChoice, computerChoice){
     
     if (playerChoice == computerChoice){
@@ -102,6 +85,8 @@ function playRound(playerChoice, computerChoice){
 
 //linkear los resultados a las variables.
 
+
+//Buttons for player's choice
 let buttons = document.querySelectorAll('.buttonChoices');
 
 buttons.forEach((button) => {
@@ -130,7 +115,7 @@ buttons.forEach((button) => {
 });
 
 
-//button to rest the game
+//button to reset the game
 function resetGame(){
     playerWins = 0;
     computerWins = 0;
